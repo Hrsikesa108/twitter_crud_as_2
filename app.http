@@ -1,0 +1,72 @@
+//API 1
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{    
+    "username": "adam_richard",
+    "password": "richard_567",
+    "name": "Adam Richard",
+    "gender": "male"
+}
+
+###
+//API 2
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+###
+
+//API 3 Returns the latest tweets of people whom the user follows. 
+GET http://localhost:3000/user/tweets/feed/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjIzOTMxOTgwfQ.KSQtrmmRnWUuEDy_WksVNJyi17RasYbmXz8yKsEWeyk
+
+###
+//API 4 Returns the list of all names of people whom the user follows
+GET http://localhost:3000/user/following/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjIzOTMxOTgwfQ.KSQtrmmRnWUuEDy_WksVNJyi17RasYbmXz8yKsEWeyk
+
+###
+//API 5 Returns the list of all names of people who follows the user
+GET http://localhost:3000/user/followers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjIzOTMxOTgwfQ.KSQtrmmRnWUuEDy_WksVNJyi17RasYbmXz8yKsEWeyk
+
+
+###
+//API 6 If the user requests a tweet of the user he is following, return the tweet, likes count, replies count and date-time
+GET http://localhost:3000/tweets/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjIzOTMxOTgwfQ.KSQtrmmRnWUuEDy_WksVNJyi17RasYbmXz8yKsEWeyk
+
+###
+//API 7
+GET http://localhost:3000/tweets/1/likes/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjIzOTMxOTgwfQ.KSQtrmmRnWUuEDy_WksVNJyi17RasYbmXz8yKsEWeyk
+
+###
+//API 8
+GET http://localhost:3000/tweets/1/replies/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjIzOTMxOTgwfQ.KSQtrmmRnWUuEDy_WksVNJyi17RasYbmXz8yKsEWeyk
+
+###
+//API 9 Returns a list of all tweets of the user
+GET http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjIzOTMxOTgwfQ.KSQtrmmRnWUuEDy_WksVNJyi17RasYbmXz8yKsEWeyk
+
+
+###
+POST http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjIzOTMxOTgwfQ.KSQtrmmRnWUuEDy_WksVNJyi17RasYbmXz8yKsEWeyk
+Content-Type: application/json
+
+{
+   "tweet": "The Mornings..."
+}
+
+###
+//API11 delete his own tweet
+DELETE http://localhost:3000/tweets/12/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjIzOTMxOTgwfQ.KSQtrmmRnWUuEDy_WksVNJyi17RasYbmXz8yKsEWeyk
+
